@@ -1,0 +1,34 @@
+{
+    "name": "Input",
+    "maps": [
+        {
+            "name": "Map",
+            "id": "a34aa2f6-3fce-4a11-8ff2-ac838716c7f3",
+            "actions": [
+                {
+                    "name": "Action",
+                    "type": "Value",
+                    "id": "0098e58b-e787-422f-9dff-40fb44271891",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2b59b845-8b43-4fee-975a-d1061ec5dbf6",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
