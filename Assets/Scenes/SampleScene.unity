@@ -655,7 +655,7 @@ MonoBehaviour:
     m_Reference: {fileID: -8292563498248206118, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
       type: 3}
   m_SelectAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Select
       m_Type: 0
@@ -665,9 +665,10 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 6860774116148886288, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
+      type: 3}
   m_SelectActionValue:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Select Action Value
       m_Type: 0
@@ -677,9 +678,10 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -3876078699965604829, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
+      type: 3}
   m_ActivateAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Activate
       m_Type: 0
@@ -689,9 +691,10 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -830300092217398747, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
+      type: 3}
   m_ActivateActionValue:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Activate Action Value
       m_Type: 0
@@ -701,7 +704,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 8305173534707118205, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
+      type: 3}
   m_UIPressAction:
     m_UseReference: 0
     m_Action:
@@ -1523,7 +1527,7 @@ MonoBehaviour:
     m_Reference: {fileID: 4840500703096475794, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
       type: 3}
   m_SelectAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Select
       m_Type: 0
@@ -1533,9 +1537,10 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 476694022002379409, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
+      type: 3}
   m_SelectActionValue:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Select Action Value
       m_Type: 0
@@ -1545,9 +1550,10 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -7138879454387019298, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
+      type: 3}
   m_ActivateAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Activate
       m_Type: 0
@@ -1557,9 +1563,10 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -7213340096731858978, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
+      type: 3}
   m_ActivateActionValue:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
       m_Name: Activate Action Value
       m_Type: 0
@@ -1569,7 +1576,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 1716798038380852607, guid: 5ea65bbc2e7ef984bb1e3c92296fd742,
+      type: 3}
   m_UIPressAction:
     m_UseReference: 0
     m_Action:
