@@ -21,7 +21,7 @@ public class Button : MonoBehaviour
 
     void Update()
     {
-        float distance = Mathf.Abs(transform.position.y - startPos.y);
+        float distance = Vector3.Distance(transform.position, startPos);
         if (distance >= pressLength)
         {
             transform.position = new Vector3(transform.position.x, startPos.y - pressLength, transform.position.z);
