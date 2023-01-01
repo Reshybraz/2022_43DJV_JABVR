@@ -40,8 +40,8 @@ public class FroceDetection : MonoBehaviour
             RB.useGravity = true;
             RB.constraints = RigidbodyConstraints.None;
             RB.drag = 0;
-           // RB.AddForce(other.relativeVelocity,ForceMode.Impulse);
-            //RB.AddExplosionForce(10f,this.transform.position,1f);
+            RB.AddForce(other.relativeVelocity*0.05f,ForceMode.Impulse);
+            RB.AddExplosionForce(10f,this.transform.position,1f);
         }
        
     }
