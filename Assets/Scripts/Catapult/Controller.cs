@@ -5,8 +5,9 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
     public float rotation;
-    public Rigidbody boulet;
-
+    public GameObject boulet;
+    public Transform pos;
+    
     public float force;
     // Update is called once per frame
     void Update()
@@ -21,12 +22,14 @@ public class Controller : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
 
+
+            GameObject go = Instantiate(boulet, pos.transform.position, Quaternion.identity);
+            Rigidbody rb = go.GetComponent<Rigidbody>();
+            
             Vector3 orientation = transform.forward + transform.up; 
             
-            Debug.DrawRay(boulet.transform.position,orientation,Color.red,1000f);
-            
-           boulet.useGravity = true;
-            boulet.AddForce(orientation* force,ForceMode.Impulse );
+            rb.useGravity = true;
+            rb.AddForce(orientation* force,ForceMode.Impulse );
         }
         
     
