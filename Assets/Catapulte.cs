@@ -5,7 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Catapulte : MonoBehaviour
 {
-    private float strartSpring;
+    private float startSpring;
     private HingeJoint h;
     private XRGrabInteractable xr;
     private bool isarming;
@@ -15,7 +15,7 @@ public class Catapulte : MonoBehaviour
         isarming = true;
         h = GetComponent<HingeJoint>();
         xr = GetComponent<XRGrabInteractable>();
-        strartSpring = h.spring.spring;
+        startSpring = h.spring.spring;
     }
 
     // Update is called once per frame
@@ -27,12 +27,12 @@ public class Catapulte : MonoBehaviour
                 h.useSpring=true;
             }
             
-            if (h.angle > 175) {
+            if (h.angle >= 177) {
                 isarming = false;
             }
         }
         else {
-            if (h.angle <= 175) {
+            if (h.angle < 177) {
                 isarming=true;
             }
             xr.enabled = false;
