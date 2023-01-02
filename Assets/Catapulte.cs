@@ -22,6 +22,9 @@ public class Catapulte : MonoBehaviour
     {
         return h.angle;
     }
+    public bool getArming() {
+        return isarming;
+    }
 
     // Update is called once per frame
     void Update()

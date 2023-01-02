@@ -8,6 +8,7 @@ public class Controller : MonoBehaviour
     public GameObject boulet;
     public Transform pos;
     public Cockpit input;
+    public Catapulte manivelle;
     
     public float force;
     // Update is called once per frame
@@ -19,10 +20,13 @@ public class Controller : MonoBehaviour
 
         transform.Rotate(Vector3.up, input.getAngle() / 90.0f);
         
-        if (Input.GetButtonDown("Jump"))
-        {
+    
+    }
 
+    public void launchBall()
+    {
 
+        if (!manivelle.getArming()) {
             GameObject go = Instantiate(boulet, pos.transform.position, Quaternion.identity);
             Rigidbody rb = go.GetComponent<Rigidbody>();
             
@@ -32,6 +36,5 @@ public class Controller : MonoBehaviour
             rb.AddForce(orientation* force,ForceMode.Impulse );
         }
         
-    
     }
 }
