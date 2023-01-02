@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour
     public float rotation;
     public GameObject boulet;
     public Transform pos;
+    public Catapulte input;
     
     public float force;
     // Update is called once per frame
@@ -16,9 +17,8 @@ public class Controller : MonoBehaviour
 
         float rot =  Input.GetAxisRaw("Horizontal"); 
         
-        this.transform.Rotate(this.transform.up * rot *rotation );
-
-
+        this.transform.rotation = Quaternion.Euler(0,input.getAngle(),0);
+        
         if (Input.GetButtonDown("Jump"))
         {
 

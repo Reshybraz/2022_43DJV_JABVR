@@ -18,6 +18,11 @@ public class Catapulte : MonoBehaviour
         strartSpring = h.spring.spring;
     }
 
+    public float getAngle()
+    {
+        return h.angle;
+    }
+
     // Update is called once per frame
     void Update()
     {
