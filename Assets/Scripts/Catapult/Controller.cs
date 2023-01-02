@@ -15,9 +15,9 @@ public class Controller : MonoBehaviour
     {
 
 
-        float rot =  Input.GetAxisRaw("Horizontal"); 
-        
-        this.transform.rotation = Quaternion.Euler(0,input.getAngle(),0);
+        float rot =  Input.GetAxisRaw("Horizontal");
+
+        transform.Rotate(Vector3.up, input.getAngle() / 177.0f);
         
         if (Input.GetButtonDown("Jump"))
         {
