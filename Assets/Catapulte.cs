@@ -35,12 +35,12 @@ public class Catapulte : MonoBehaviour
                 h.useSpring=true;
             }
             
-            if (h.angle > 175) {
+            if (h.angle > 95) {
                 isarming = false;
             }
         }
         else {
-            if (h.angle <= 175) {
+            if (h.angle <= 95) {
                 isarming=true;
             }
             xr.enabled = false;

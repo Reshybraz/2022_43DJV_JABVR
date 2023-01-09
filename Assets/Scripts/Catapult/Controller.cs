@@ -8,6 +8,7 @@ public class Controller : MonoBehaviour
     public GameObject boulet;
     public Transform pos;
     public Cockpit input;
+    public Cockpit input2;
     public Catapulte manivelle;
     
     public float force;
@@ -19,6 +20,13 @@ public class Controller : MonoBehaviour
         float rot =  Input.GetAxisRaw("Horizontal");
 
         transform.Rotate(Vector3.up, input.getAngle() / 90.0f);
+        transform.Translate(Vector3.up*input2.getAngle() /(90.0f*50));
+        if (transform.position.y >10 ) {
+            new Vector3 (transform.position.x,50,transform.position.z);
+        }
+        if (transform.position.y <0 ) {
+            transform.position = new Vector3 (transform.position.x,0,transform.position.z);
+        }
         
     
     }
