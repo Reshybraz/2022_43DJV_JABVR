@@ -29,22 +29,8 @@ public class Catapulte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isarming) {
-            if (!h.useSpring) {
-                xr.enabled=true;
-                h.useSpring=true;
-            }
-            
-            if (h.angle > 95) {
-                isarming = false;
-            }
-        }
-        else {
-            if (h.angle <= 95) {
-                isarming=true;
-            }
-            xr.enabled = false;
-            h.useSpring = false;
+        if (h.angle > 95) {
+            isarming = false;
         }
     }
 
