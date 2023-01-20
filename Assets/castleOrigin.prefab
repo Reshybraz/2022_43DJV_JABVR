@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5387207535991644515}
   - component: {fileID: 5569138318927169158}
+  - component: {fileID: 5859479993327193861}
   m_Layer: 0
   m_Name: castleOrigin
   m_TagString: Untagged
@@ -47,6 +48,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BasicMesh: {fileID: 5440643977119652310, guid: 2631edd49ad88314d88b83787e86511d,
     type: 3}
+--- !u!65 &5859479993327193861
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722275011776658393}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.777292, y: 13.61666, z: 4.441452}
+  m_Center: {x: 1.388646, y: 6.308332, z: -1.720726}
 --- !u!1 &7908851372801509830
 GameObject:
   m_ObjectHideFlags: 0
