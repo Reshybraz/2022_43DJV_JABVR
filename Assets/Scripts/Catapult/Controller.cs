@@ -41,7 +41,7 @@ public class Controller : MonoBehaviour
             Vector3 orientation = transform.forward + transform.up; 
             
             rb.useGravity = true;
-            rb.AddForce(orientation* force,ForceMode.Impulse );
+            rb.AddForce(orientation* (force*manivelle.getCharge()),ForceMode.Impulse );
         }
         
     }

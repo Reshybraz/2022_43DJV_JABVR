@@ -9,6 +9,8 @@ public class Catapulte : MonoBehaviour
     private HingeJoint h;
     private XRGrabInteractable xr;
     private bool isarming;
+    [SerializeField]
+    private float launchAngle;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +31,19 @@ public class Catapulte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (h.angle > 95) {
-            isarming = false;
-        }
+        
     }
 
     public void launch() {
         isarming=true;
+    }
+
+    public void setCharge() {
+        isarming = false;
+        launchAngle = h.angle;
+    }
+
+    public float getCharge() {
+        return launchAngle/100;
     }
 }

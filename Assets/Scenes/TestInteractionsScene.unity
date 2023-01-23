@@ -449,6 +449,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7892937250096329016, guid: 83d8553aecfa24149ab7a5f5593daa7a,
         type: 3}
+      propertyPath: m_PlayHapticsOnSelectExited
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892937250096329016, guid: 83d8553aecfa24149ab7a5f5593daa7a,
+        type: 3}
       propertyPath: m_PlayHapticsOnSelectEntered
       value: 1
       objectReference: {fileID: 0}
@@ -562,6 +567,11 @@ PrefabInstance:
       propertyPath: m_ModelPrefab
       value: 
       objectReference: {fileID: 130793723}
+    - target: {fileID: 7892937251116329415, guid: 83d8553aecfa24149ab7a5f5593daa7a,
+        type: 3}
+      propertyPath: m_PlayHapticsOnSelectExited
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7892937251116329415, guid: 83d8553aecfa24149ab7a5f5593daa7a,
         type: 3}
       propertyPath: m_PlayHapticsOnSelectEntered
@@ -998,6 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f38cbe14345bbc4a943bd694ca5a34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  launchAngle: 0
 --- !u!114 &1011626338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2173,7 +2184,7 @@ SpringJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.00000009822543, y: 0.6499996, z: -0.00000020543878}
   serializedVersion: 2
   m_Spring: 100
   m_Damper: 10
@@ -2713,7 +2724,7 @@ HingeJoint:
   m_Anchor: {x: 0.55, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  m_ConnectedAnchor: {x: -0.2552923, y: 0, z: -1.0750005}
   m_UseSpring: 1
   m_Spring:
     spring: 50
@@ -2785,7 +2796,19 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1011626337}
+        m_TargetAssemblyTypeName: Catapulte, Assembly-CSharp
+        m_MethodName: setCharge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -3200,7 +3223,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.5, z: -0.5}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000017881389, y: 0.9499998, z: 0.00000035762787}
+  m_ConnectedAnchor: {x: 0.00000023953646, y: 0.95000005, z: -0.00000037252903}
   m_UseSpring: 1
   m_Spring:
     spring: 70
@@ -3533,7 +3556,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.5, z: -0.5}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000017881389, y: 0.9499999, z: 0}
+  m_ConnectedAnchor: {x: 0.0000005189333, y: 0.95000005, z: -0.00000037252903}
   m_UseSpring: 1
   m_Spring:
     spring: 50
