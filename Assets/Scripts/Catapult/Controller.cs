@@ -28,6 +28,21 @@ public class Controller : MonoBehaviour
             transform.position = new Vector3 (transform.position.x,0,transform.position.z);
         }
         
+        
+        transform.Rotate(Vector3.up,  Input.GetAxisRaw("Horizontal"));
+        transform.Translate(Vector3.up*Input.GetAxisRaw("Vertical") );
+        
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            GameObject go = Instantiate(boulet, pos.transform.position, Quaternion.identity);
+            Rigidbody rb = go.GetComponent<Rigidbody>();
+            
+            Vector3 orientation = transform.forward + transform.up; 
+            
+            rb.useGravity = true;
+            rb.AddForce(orientation* force,ForceMode.Impulse );
+        }
     
     }
 

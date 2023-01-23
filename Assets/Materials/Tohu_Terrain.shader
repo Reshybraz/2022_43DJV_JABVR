@@ -8,18 +8,25 @@ Shader "Tohu Bohu/Terrain"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+         Tags 
+        {
+            "RenderType"="Opaque"
+            "LightMode" = "UniversalForward" 
+            "PassFlags" = "OnlyDirectional"
+            "RenderPipeline" = "UniversalPipeline"
+        } 
         LOD 100
 
         Pass
         {
-            CGPROGRAM
-            #pragma vertex vert
+            HLSLPROGRAM
+           #pragma vertex vert
             #pragma fragment frag
-            // make fog work
-            #pragma multi_compile_fog
+           	#pragma multi_compile_fwdbase
+            #pragma multi_compile _ _MAIN_LIGHT_SHADOWS
 
-            #include "UnityCG.cginc"
+            //#include "UnityCG.cginc"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 
             struct appdata
             {
@@ -31,9 +38,9 @@ Shader "Tohu Bohu/Terrain"
             struct v2f
             {
                 float2 uv : TEXCOORD0;
-                UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
                 float3 normal : TEXCOORD2;
+                float4 shadowCoord : TEXCOORD3;
             };
 
             sampler2D UPTexture;
@@ -47,30 +54,35 @@ Shader "Tohu Bohu/Terrain"
             v2f vert (appdata v)
             {
                 v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.vertex = TransformObjectToHClip(v.vertex);
                 o.uv = v.uv;
                 o.normal =v.normal;
-                UNITY_TRANSFER_FOG(o,o.vertex);
+                
+                float3 worldPos = GetVertexPositionInputs(v.vertex.xyz).positionWS;
+                o.shadowCoord = TransformWorldToShadowCoord(worldPos);
                 return o;
             }
 
-            fixed4 frag (v2f i) : SV_Target
+            float4 frag (v2f i) : SV_Target
             {
                 // sample the texture
-                fixed4 tex1 = tex2D(UPTexture, i.uv * UPTexture_ST.xy + UPTexture_ST.zw );
-                fixed4 tex2 = tex2D(FrontTexture, i.uv * FrontTexture_ST.xy + FrontTexture_ST.zw );
+                float4 tex1 = tex2D(UPTexture, i.uv * UPTexture_ST.xy + UPTexture_ST.zw );
+                float4 tex2 = tex2D(FrontTexture, i.uv * FrontTexture_ST.xy + FrontTexture_ST.zw );
+
+                Light mainLight = GetMainLight(i.shadowCoord);
+                 float shadow = mainLight.shadowAttenuation;
                 
                 float N = 1- saturate( dot(normalize(i.normal),float3(0,1,0)));
                 N = smoothstep(Threshold,Threshold + 0.01,N);
                 
                 float3 col = lerp(tex1,tex2,N.x);
 
-      
-                // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, col);
+                shadow = saturate(shadow);
+                    
                 return float4(col,1);
             }
-            ENDCG
+            ENDHLSL
         }
+        UsePass "Legacy Shaders/VertexLit/SHADOWCASTER"
     }
 }
