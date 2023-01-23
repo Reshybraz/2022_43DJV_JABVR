@@ -9,9 +9,15 @@ public class FroceDetection : MonoBehaviour
 {
 
    private float timer = 5f;
-    
+   private Rigidbody RB;
 
-    // Update is called once per frame
+   private void Start()
+   {
+       RB = GetComponent<Rigidbody>();
+       RB.AddExplosionForce(50f, transform.parent.position, 5.0f, 3.0F,ForceMode.Impulse);
+   }
+
+   // Update is called once per frame
     void Update()
     {
         timer -= Time.deltaTime;
