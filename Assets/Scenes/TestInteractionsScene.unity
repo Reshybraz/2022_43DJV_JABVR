@@ -1639,6 +1639,8 @@ MonoBehaviour:
   input: {fileID: 4303907512104714609}
   input2: {fileID: 1011626339}
   manivelle: {fileID: 1011626337}
+  maxY: 2
+  minY: 10
   force: 30
 --- !u!4 &1803593513
 Transform:
