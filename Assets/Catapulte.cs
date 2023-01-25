@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class Catapulte : MonoBehaviour
 {
+    public GameObject bouletPlaceholder;
     private float strartSpring;
     private HingeJoint h;
     private XRGrabInteractable xr;
@@ -41,6 +42,7 @@ public class Catapulte : MonoBehaviour
     public void setCharge() {
         isarming = false;
         launchAngle = h.angle;
+        bouletPlaceholder.SetActive(true);
     }
 
     public float getCharge() {

@@ -6,6 +6,7 @@ public class Controller : MonoBehaviour
 {
     public float rotation;
     public GameObject boulet;
+    public GameObject bouletPlaceholder;
     public Transform pos;
     public Cockpit input;
     public Cockpit input2;
@@ -43,6 +44,7 @@ public class Controller : MonoBehaviour
             
             rb.useGravity = true;
             rb.AddForce(orientation* (force*manivelle.getCharge()),ForceMode.Impulse );
+            bouletPlaceholder.SetActive(false);
         }
         
     }
