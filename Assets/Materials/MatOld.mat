@@ -28,8 +28,19 @@ Material:
         m_Texture: {fileID: 2800000, guid: a0cc0c2d2ce90c44eabe771b99dd164e, type: 3}
         m_Scale: {x: 100, y: 100}
         m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Threshold: 0.154
-    m_Colors: []
+    - Threshold: 0.13
+    - _Glossiness: 30
+    - _RimAmount: 0.687
+    - _RimThreshold: 0.332
+    m_Colors:
+    - _AmbientColor: {r: 0.5566038, g: 0.1767829, b: 0.1767829, a: 1}
+    - _Color: {r: 0.46226418, g: 0.1773466, b: 0.1773466, a: 1}
+    - _RimColor: {r: 0.9150943, g: 0.5237332, b: 0.5237332, a: 1}
+    - _SpecularColor: {r: 0.23584908, g: 0.030408198, b: 0.030408198, a: 1}
   m_BuildTextureStacks: []

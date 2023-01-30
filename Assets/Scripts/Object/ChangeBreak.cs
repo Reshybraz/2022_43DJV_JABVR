@@ -23,7 +23,7 @@ public class ChangeBreak : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("yo");
+   
         col = this.GetComponent<BoxCollider>();
     }
 
