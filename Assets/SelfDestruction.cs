@@ -13,7 +13,7 @@ public class SelfDestruction : MonoBehaviour
      }
      IEnumerator SelfDestruct()
      {
-         yield return new WaitForSeconds(30f);
+         yield return new WaitForSeconds(20f);
          Destroy(gameObject);
      }
 }

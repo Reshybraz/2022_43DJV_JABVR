@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 
         float rot =  Input.GetAxisRaw("Horizontal");
 
-        transform.Rotate(Vector3.up, input.getAngle() / 90.0f);
+        transform.Rotate(Vector3.up, input.getAngle() / (90.0f*5));
         if (Input.GetButtonDown("Jump"))
         {
             GameObject go = Instantiate(boulet, pos.transform.position, Quaternion.identity);
@@ -38,7 +38,7 @@ public class Controller : MonoBehaviour
     {
 
         if (!manivelle.getArming()) {
-            Vector3 height = Vector3.up*input2.getAngle() /(180*20);
+            Vector3 height = Vector3.up*input2.getAngle()/180*20;
             GameObject go = Instantiate(boulet, pos.transform.position+height, Quaternion.identity);
             Rigidbody rb = go.GetComponent<Rigidbody>();
             
