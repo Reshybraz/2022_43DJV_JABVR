@@ -11,7 +11,6 @@ public class Controller : MonoBehaviour
     public Cockpit input;
     public Cockpit input2;
     public Catapulte manivelle;
-    public int maxY, minY;
     
     public float force;
     // Update is called once per frame
@@ -22,22 +21,10 @@ public class Controller : MonoBehaviour
         float rot =  Input.GetAxisRaw("Horizontal");
 
         transform.Rotate(Vector3.up, input.getAngle() / 90.0f);
-        transform.Translate(Vector3.up*input2.getAngle() /(90.0f*50));
-        if (transform.position.y >maxY ) {
-            transform.position = new Vector3 (transform.position.x,maxY,transform.position.z);
-        }
-        if (transform.position.y <minY ) {
-            transform.position = new Vector3 (transform.position.x,minY,transform.position.z);
-        }
-        
-        
-        transform.Rotate(Vector3.up,  Input.GetAxisRaw("Horizontal"));
-        transform.Translate(Vector3.up*Input.GetAxisRaw("Vertical") );
-        
-
+        Vector3 height = Vector3.up*input2.getAngle() /(180*20);
         if (Input.GetButtonDown("Jump"))
         {
-            GameObject go = Instantiate(boulet, pos.transform.position, Quaternion.identity);
+            GameObject go = Instantiate(boulet, pos.transform.position+height, Quaternion.identity);
             Rigidbody rb = go.GetComponent<Rigidbody>();
             
             Vector3 orientation = transform.forward + transform.up; 
