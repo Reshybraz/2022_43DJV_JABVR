@@ -21,18 +21,17 @@ public class Catapulte : MonoBehaviour
         strartSpring = h.spring.spring;
     }
 
+    public void setAnchor() {
+        h.autoConfigureConnectedAnchor = false;
+        h.autoConfigureConnectedAnchor = true;
+    }
+
     public float getAngle()
     {
         return h.angle;
     }
     public bool getArming() {
         return isarming;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void launch() {

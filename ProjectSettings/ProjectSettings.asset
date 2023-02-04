@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 2022_43DJV_JABVR5
+  productName: Boom Catapulte
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -177,9 +177,7 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 11400000, guid: 52e8b427228ab9e4c9de836b6afe1e52, type: 2}
-  - {fileID: 1149257981854025947, guid: b0a2d95649bb66949ad6ef2627b7d440, type: 2}
-  - {fileID: 1110242040312308097, guid: 49aabd5ab20159b4d8c92ca05b351332, type: 2}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1

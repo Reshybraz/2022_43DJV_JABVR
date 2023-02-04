@@ -11,6 +11,11 @@ public class Cockpit : MonoBehaviour
          h = GetComponent<HingeJoint>();
     }
 
+    public void setAnchor() {
+        h.autoConfigureConnectedAnchor = false;
+        h.autoConfigureConnectedAnchor = true;
+    }
+
     public float getAngle()
     {
         return h.angle;
