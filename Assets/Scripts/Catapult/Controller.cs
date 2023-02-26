@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Controller : MonoBehaviour
 {
@@ -11,12 +12,13 @@ public class Controller : MonoBehaviour
     public Cockpit input;
     public Cockpit input2;
     public Catapulte manivelle;
+    public GameObject UI;
+
     
     public float force;
     // Update is called once per frame
     void Update()
     {
-
 
         float rot =  Input.GetAxisRaw("Horizontal");
 
@@ -49,5 +51,13 @@ public class Controller : MonoBehaviour
             bouletPlaceholder.SetActive(false);
         }
         
+    }
+
+    public void launchWait(float w) {
+        StartCoroutine(wait(w));
+    }
+
+    IEnumerator wait(float w) {
+        yield return new WaitForSeconds(w);
     }
 }
