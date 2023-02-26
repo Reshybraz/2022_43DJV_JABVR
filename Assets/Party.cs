@@ -29,11 +29,11 @@ public class Party : MonoBehaviour
         time += Time.deltaTime;
         if (finish)
         {
-            finalTimeText.text = "temps final : " + finalTime;
+            finalTimeText.text = "temps final : " + finalTime.ToString("F2") + "s";
         }
         else
         {
-            timeText.text = "temps : " + time;
+            timeText.text = "temps : " + time.ToString("F2")+"s";
             if (nbDestroy >= 5)
             {
                 finish = true;
