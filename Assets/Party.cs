@@ -52,4 +52,9 @@ public class Party : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void quit()
+    {
+        Application.Quit();
+    }
 }
